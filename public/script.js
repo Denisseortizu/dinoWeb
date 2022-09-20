@@ -1,15 +1,13 @@
-import fetch from 'node-fetch';
-console.log('script.js Se cargo :)');
 
-console.log('Hola');
+console.log('script.js Se cargo :)');
+//import fetch from 'node-fetch';
+
 getDinoName();
 
-console.log('No se cargó funcion :(');
 
 async function getDinoName(){
-    console.log('Se carga funcion <3');
-    const response = await fetch('/');
+    const response = await fetch('/dinoname');
 	const data = await response.json();
-	let dinoName = data[0].join(' ');
+	let dinoName = data.join(' ');
 	console.log(dinoName);
 } 

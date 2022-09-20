@@ -11,7 +11,7 @@ app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
 });
 
-app.get('/1', async (request, response) => {
+app.get('/dinoname', async (request, response) => {
 
 	const fetchApi = await fetch('https://dinoipsum.com/api/?format=json&words=2&paragraphs=1');
     //.then(response => response.json())
